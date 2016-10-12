@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.quizapp.Religion">>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.android.quizapp.Religion">>
-
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,51 +26,50 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="1. Moses was.......?"
+                    android:id="@+id/textView"
                     android:layout_width="336dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView" />
-
+                    android:text="1. Moses was.......?" />
 
 
                 <RadioGroup
+                    android:id="@+id/rg_first_q"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:id="@+id/rg_first_q">
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView">
 
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="a Hebrew"
                         android:id="@+id/rb_Q1_right"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="a Jew"
+                        android:checked="false"
+                        android:text="a Hebrew" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q1_2"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="a Zulu"
+                        android:checked="false"
+                        android:text="a Jew" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q1_3"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="British"
+                        android:checked="false"
+                        android:text="a Zulu" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q1_4"
-                        android:checked="false" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="British" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -80,50 +78,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
-                    android:text="2. Which one of the following is not part of God&apos;s 10 Commandments?"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="16dp"
+                    android:text="2. Which one of the following is not part of God&apos;s 10 Commandments?" />
 
                 <RadioGroup
+                    android:id="@+id/rg_second_g"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:id="@+id/rg_second_g">
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView">
 
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="You shall have no other God&apos;s before me."
                         android:id="@+id/rb_Q2_1"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="You shall not bow down to images in the form of anything or worship them."
+                        android:checked="false"
+                        android:text="You shall have no other God&apos;s before me." />
+
+                    <RadioButton
                         android:id="@+id/rb_Q2_2"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="You shall ask in the Lord your God."
+                        android:checked="false"
+                        android:text="You shall not bow down to images in the form of anything or worship them." />
+
+                    <RadioButton
                         android:id="@+id/rb_Q2_right"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="You shall not commit adultery."
+                        android:checked="false"
+                        android:text="You shall ask in the Lord your God." />
+
+                    <RadioButton
                         android:id="@+id/rb_Q2_4"
-                        android:checked="false" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="You shall not commit adultery." />
                 </RadioGroup>
 
             </LinearLayout>
@@ -133,50 +132,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
-                    android:text="3. Who was the mother of Samuel?"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="16dp"
+                    android:text="3. Who was the mother of Samuel?" />
 
                 <RadioGroup
+                    android:id="@+id/rg_third_q"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:id="@+id/rg_third_q">
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView">
 
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Jael"
                         android:id="@+id/rb_Q3_1"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Abigail"
+                        android:checked="false"
+                        android:text="Jael" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q3_2"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sarah"
+                        android:checked="false"
+                        android:text="Abigail" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q3_3"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hannah"
+                        android:checked="false"
+                        android:text="Sarah" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q3_right"
-                        android:checked="false" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Hannah" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -186,51 +186,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
-                    android:text="4. Jesus is proclaimed as...?"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="16dp"
+                    android:text="4. Jesus is proclaimed as...?" />
 
                 <RadioGroup
+                    android:id="@+id/rg_fourth_q"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:id="@+id/rg_fourth_q">
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView">
 
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="a Prophet"
                         android:id="@+id/rb_Q4_1"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="a Priest"
+                        android:checked="false"
+                        android:text="a Prophet" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q4_2"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="a Messiah"
+                        android:checked="false"
+                        android:text="a Priest" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q4_right"
-                        android:checked="false" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="a Messiah" />
 
 
                     <RadioButton
+                        android:id="@+id/rb_Q4_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="an Apostle"
-                        android:id="@+id/rb_Q4_4"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:text="an Apostle" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -240,71 +241,76 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
-                    android:text="5. Who sold Jesus to the elders of the law to be crucified?"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="16dp"
+                    android:text="5. Who sold Jesus to the elders of the law to be crucified?" />
 
                 <RadioGroup
+                    android:id="@+id/rg_fifth_q"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:id="@+id/rg_fifth_q">
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView">
 
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Matthews"
                         android:id="@+id/rb_Q5_5"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Judas Iscariot"
+                        android:checked="false"
+                        android:text="Matthews" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q5_right"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Simon Peter"
+                        android:checked="false"
+                        android:text="Judas Iscariot" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q5_3"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Simon the Zealot"
+                        android:checked="false"
+                        android:text="Simon Peter" />
+
+                    <RadioButton
                         android:id="@+id/rb_Q5_4"
-                        android:checked="false" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Simon the Zealot" />
                 </RadioGroup>
 
             </LinearLayout>
-
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                android:id="@+id/submit_button"
-                android:layout_marginTop="25dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:onClick="onClickListenerButton"/>
 
         </LinearLayout>
+    </ScrollView>
 
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center">
 
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/send" />
 
     </RelativeLayout>
-</ScrollView>
+
+</RelativeLayout>
+
 
 

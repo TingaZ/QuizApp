@@ -1,6 +1,7 @@
 package com.example.android.quizapp;
 
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +30,7 @@ public class Politics extends AppCompatActivity {
 
 
     int x, y, z, w, u;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class Politics extends AppCompatActivity {
     }
 
     //This method nests every submit button activity
-    public void submitPoliticsButton(){
+    public void submitPoliticsButton() {
         radio_first_Q = (RadioGroup) findViewById(R.id.rg_first_q);
         radio_second_Q = (RadioGroup) findViewById(R.id.rg_second_g);
         radio_third_Q = (RadioGroup) findViewById(R.id.rg_third_q);
@@ -103,22 +105,22 @@ public class Politics extends AppCompatActivity {
                             int e = x + y + z + w + u;
                             int results = (int) (e * 100.0f) / 5;
                             if (results >= 100) {
-                                Toast.makeText(Politics.this, "Congratulations!!!! \nYou are an Intermediate Master In Politics. \nResults: " + results + "%", Toast.LENGTH_LONG).show();
+                                showMessage("Congratulations!!!!", "You are an Intermediate Master In Technology." + " \nResults: " + results + "%");
                                 radio_first_Q.clearCheck();
                                 radio_second_Q.clearCheck();
                                 radio_third_Q.clearCheck();
                                 radio_fourth_Q.clearCheck();
                                 radio_fifth_Q.clearCheck();
                             } else {
-                                Toast.makeText(Politics.this, "Sorry, you did not make it! \nYou can try again.. \nResults: " + results + "%", Toast.LENGTH_LONG).show();
+                                showMessage("Sorry, you did not make it!", "You can try again.." + " \nResults: " + results + "%");
                                 radio_first_Q.clearCheck();
                                 radio_second_Q.clearCheck();
                                 radio_third_Q.clearCheck();
                                 radio_fourth_Q.clearCheck();
                                 radio_fifth_Q.clearCheck();
                             }
-                        }catch (Exception e){
-                            Toast.makeText(Politics.this, "Please select  answers for questions.", Toast.LENGTH_SHORT).show();
+                        } catch (Exception e) {
+                            Toast.makeText(Politics.this, "Please Complete  All Questions.", Toast.LENGTH_SHORT).show();
                             radio_first_Q.clearCheck();
                             radio_second_Q.clearCheck();
                             radio_third_Q.clearCheck();
@@ -128,5 +130,13 @@ public class Politics extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    public void showMessage(String name1, String name2) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(name1);
+        builder.setMessage(name2);
+        builder.show();
     }
 }
